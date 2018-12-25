@@ -1,2 +1,2 @@
 # meta-odroid
-Odroid BSP layer for PLi's OE
+Odroid BSP layer for Open Vision
