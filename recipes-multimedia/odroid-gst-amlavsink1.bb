@@ -18,7 +18,7 @@ DEPENDS = " gstreamer1.0 odroid-libamcodec-${MACHINE} odroid-libamavutils-${MACH
 
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
-SRC_URI = "git://github.com/PLi-metas/gst-amlavsink1.git;protocol=git"
+SRC_URI = "git://github.com/OpenVisionE2/gst-amlavsink1.git;protocol=git"
 
 S = "${WORKDIR}/git"
 

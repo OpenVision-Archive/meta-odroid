@@ -7,7 +7,7 @@ PV = "3.14.79"
 
 #KERNEL_DEVICETREE_odroidc2 = "meson64_odroidc2.dtb"
 
-SRC_URI = "https://github.com/PLi-metas/hardkernel/archive/odroidc2-enigma2.tar.gz \
+SRC_URI = "https://github.com/OpenVisionE2/hardkernel/archive/odroidc2-enigma2.tar.gz \
     file://add_uboot.patch \
     file://defconfig \
 "

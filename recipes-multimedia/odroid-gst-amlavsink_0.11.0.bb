@@ -12,7 +12,7 @@ inherit autotools pkgconfig
 
 DEPENDS = "gstreamer odroid-libamcodec-${MACHINE} odroid-libamavutils-${MACHINE}"
 
-SRC_URI = "https://raw.githubusercontent.com/PLi-metas/amlogic-libs/master/gst-aml-plugins-0.11.0.zip \
+SRC_URI = "https://raw.githubusercontent.com/OpenVisionE2/amlogic-libs/master/gst-aml-plugins-0.11.0.zip \
            file://osd_fix.patch \
 "
 
