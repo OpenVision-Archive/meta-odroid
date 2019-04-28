@@ -1,3 +1,5 @@
+BOX_BRAND = "hardkernel"
+
 # Odroid BSP default settings
 LINUX_VERSION_EXTENSION ?= ""
 
