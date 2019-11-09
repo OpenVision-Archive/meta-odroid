@@ -15,3 +15,5 @@ do_install() {
     install -d ${D}${sysconfdir}/init.d/
     install -m 0755 ${WORKDIR}/${MACHINE}-shutdown.sh ${D}${sysconfdir}/init.d/odroid-shutdown
 }
+
+COMPATIBLE_MACHINE = "^(odroidc2)$"
