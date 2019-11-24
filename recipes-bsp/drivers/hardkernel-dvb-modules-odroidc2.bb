@@ -25,8 +25,8 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra
-    install -m 0755 ${WORKDIR}/hardkerneldvb.ko ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra/
+    install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
+    install -m 0755 ${WORKDIR}/hardkerneldvb.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra/
     install -d ${D}/${sysconfdir}/modules-load.d
     echo "hardkerneldvb" > ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
     echo "e2-procfs" >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
