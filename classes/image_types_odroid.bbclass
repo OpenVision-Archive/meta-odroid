@@ -26,7 +26,7 @@ BOOTDD_VOLUME_ID ?= "${MACHINE}"
 IMAGE_ROOTFS_ALIGNMENT_odroidc2 = "1024"
 
 SDIMG_ROOTFS_TYPE ?= "ext4"
-SDIMG_ROOTFS = "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.${SDIMG_ROOTFS_TYPE}"
+SDIMG_ROOTFS = "${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.${SDIMG_ROOTFS_TYPE}"
 SDIMG = "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.img"
 
 # Boot partition size [in KiB] to get boot partition with size of 128M
@@ -41,8 +41,8 @@ do_image_sdcard[depends] += " \
     ${@bb.utils.contains("KERNEL_IMAGETYPE", "uImage", "u-boot:do_populate_sysroot", "",d)} \
     "
 
-SDCARD = "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.sdcard"
-SDCARD_ROOTFS ?= "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ext4"
+SDCARD = "${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.sdcard"
+SDCARD_ROOTFS ?= "${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ext4"
 SDCARD_GENERATION_COMMAND_odroidc2= "generate_odroid_c2_sdcard"
 
 generate_odroid_c2_sdcard () {
