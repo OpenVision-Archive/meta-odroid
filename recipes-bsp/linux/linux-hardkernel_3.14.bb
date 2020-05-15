@@ -10,7 +10,7 @@ PV = "3.14.79"
 SRC_URI = "https://github.com/OpenVisionE2/hardkernel/archive/odroidc2-enigma2.tar.gz \
     file://add_uboot.patch \
     file://defconfig \
-    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc6.patch \
+    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
 "
 
 S = "${WORKDIR}/hardkernel-odroidc2-enigma2"
