@@ -1,4 +1,4 @@
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 require recipes-kernel/linux/linux-yocto.inc
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
