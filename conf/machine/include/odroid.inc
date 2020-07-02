@@ -46,7 +46,7 @@ KERNEL_MODULE_AUTOLOAD += "\
     rc-core \
     mali \
     dhd \
-    CH341 \
+    ch341 \
     rfcomm \
     hidp \
     cfg80211 \
