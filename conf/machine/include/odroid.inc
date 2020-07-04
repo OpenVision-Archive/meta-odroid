@@ -27,39 +27,41 @@ DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    odroid-shutdown \
-    hardkernel-mali-${MACHINE} \
-    odroid-gst-amlavsink odroid-gst-amlavout gst-ffmpeg gst-fluendo-mpegdemux \
-    "
+	odroid-shutdown \
+	hardkernel-mali-${MACHINE} \
+	odroid-gst-amlavsink odroid-gst-amlavout gst-ffmpeg gst-fluendo-mpegdemux \
+	kernel-modules \
+	"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    odroid-libamplayer-${MACHINE} \
-    odroid-libamavutils-${MACHINE} \
-    odroid-libamadec-${MACHINE} \
-    odroid-libamcodec-${MACHINE} \
-    "
+	odroid-libamplayer-${MACHINE} \
+	odroid-libamavutils-${MACHINE} \
+	odroid-libamadec-${MACHINE} \
+	odroid-libamcodec-${MACHINE} \
+	"
 
 KERNEL_MODULE_AUTOLOAD += "\
-    sysfillrect \
-    syscopyarea \
-    mceusb \
-    rc-core \
-    mali \
-    dhd \
-    ch341 \
-    rfcomm \
-    hidp \
-    cfg80211 \
-    bluetooth \
-    6lowpan-iphc \
-    libcrc32c \
-    xfs \
-"
+	sysfillrect \
+	syscopyarea \
+	mceusb \
+	rc-core \
+	mali \
+	dhd \
+	ch341 \
+	rfcomm \
+	hidp \
+	cfg80211 \
+	bluetooth \
+	6lowpan-iphc \
+	libcrc32c \
+	xfs \
+	"
+
 module_conf_dhd = "options dhd firmware_path=/lib/firmware/brcm/ nvram_path=/lib/firmware/brcm/"
 
 KERNEL_MODULE_PROBECONF += "\
-    dhd \
-"
+	dhd \
+	"
 
 EXTRA_IMAGEDEPENDS += "u-boot-hardkernel"
 
