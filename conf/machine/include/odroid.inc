@@ -67,7 +67,6 @@ EXTRA_IMAGEDEPENDS += "u-boot-hardkernel"
 
 SDCARD_ROOTFS ?= "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ext4"
 IMAGE_FSTYPES ?= "sdcard"
-IMAGEDIR ?= "${MACHINE}"
 
 IMAGE_CMD_sdcard_append  = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
