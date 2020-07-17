@@ -17,8 +17,6 @@ SRC_URI = "file://hardkernel-e2-procfs-${KV}-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
-inherit module
-
 do_compile() {
 }
 
@@ -29,3 +27,5 @@ do_install() {
 
 do_package_qa() {
 }
+
+FILES_${PN} += "${base_libdir}/modules/${KV}/extra"
