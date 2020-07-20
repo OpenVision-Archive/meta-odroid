@@ -94,7 +94,7 @@ KERNEL_IMAGETYPE ?= "Image"
 UBOOT_BINARY ?= "u-boot.bin"
 UBOOT_MACHINE_odroidc2 = "odroidc2_defconfig"
 
-MACHINE_FEATURES = "serial usbgadget fb usbhost vfat ext2 alsa nolcd emmc nogamma nofhdskin multilib"
+MACHINE_FEATURES = "serial usbgadget fb usbhost vfat ext2 alsa nolcd emmc nogamma nofhdskin multilib HDMI"
 
 MTD_BLACK  = "mmcblk0"
 
