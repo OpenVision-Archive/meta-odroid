@@ -82,7 +82,7 @@ IMAGE_CMD_sdcard_append  = "\
 
 SERIAL_CONSOLE = "115200 ttyS0"
 
-PREFERRED_PROVIDER_virtual/kernel ?= "linux-hardkernel"
+PREFERRED_PROVIDER_virtual/kernel = "linux-hardkernel"
 PREFERRED_VERSION_linux-hardkernel ?= "3.14%"
 
 #specify u-boot parameters
@@ -94,7 +94,7 @@ KERNEL_IMAGETYPE ?= "Image"
 UBOOT_BINARY ?= "u-boot.bin"
 UBOOT_MACHINE_odroidc2 = "odroidc2_defconfig"
 
-MACHINE_FEATURES = "serial usbgadget fb usbhost vfat ext2 alsa nolcd emmc nogamma nofhdskin multilib HDMI"
+MACHINE_FEATURES += "serial usbgadget fb usbhost vfat ext2 alsa nolcd emmc nogamma nofhdskin multilib HDMI"
 
 MTD_BLACK  = "mmcblk0"
 
