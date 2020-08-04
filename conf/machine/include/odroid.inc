@@ -16,7 +16,7 @@ DEPENDS_append_pn-showiframe = " odroid-libamcodec-${MACHINE}"
 
 GST_VERSION = "0.10"
 
-SOC_FAMILY = "AMLS905"
+SOC_FAMILY = "amls905"
 
 require conf/distro/multilib.inc
 
@@ -99,3 +99,5 @@ MTD_BLACK  = "mmcblk0"
 
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
+
+EXTRA_ALSA = "amls905"
