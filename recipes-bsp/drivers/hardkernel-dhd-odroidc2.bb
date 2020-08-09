@@ -12,9 +12,9 @@ SRC_URI[brcm.md5sum] = "751bc7b516f83c1541b84a11438ec976"
 SRC_URI[aml.md5sum] = "7d5b0e02822baaa65a1030e35c9186f4"
 
 SRC_URI = "http://sources.libreelec.tv/devel/brcmap6xxx-aml-1.201.59.5-b82e63f.tar.xz;name=brcm \
-	   http://sources.libreelec.tv/devel/wlan-firmware-aml-b74369c.tar.xz;name=aml \
-	   file://config.txt \
-	  "
+	http://sources.libreelec.tv/devel/wlan-firmware-aml-b74369c.tar.xz;name=aml \
+	file://config.txt \
+	"
 
 S = "${WORKDIR}/brcmap6xxx-aml-1.201.59.5-b82e63f/bcmdhd_1_201_59_x"
 

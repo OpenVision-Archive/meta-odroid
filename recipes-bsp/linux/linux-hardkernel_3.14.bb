@@ -3,15 +3,15 @@ require recipes-kernel/linux/linux-yocto.inc
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-PV = "3.14.79"
+PV = "${KERNELVERSION}"
 
 #KERNEL_DEVICETREE_odroidc2 = "meson64_odroidc2.dtb"
 
 SRC_URI = "https://github.com/OpenVisionE2/hardkernel/archive/odroidc2-enigma2.tar.gz \
-    file://add_uboot.patch \
-    file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
-"
+	file://add_uboot.patch \
+	file://defconfig \
+	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
+	"
 
 S = "${WORKDIR}/hardkernel-odroidc2-enigma2"
 

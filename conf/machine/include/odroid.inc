@@ -1,3 +1,5 @@
+KERNELVERSION = "3.14.79"
+
 BOX_BRAND = "hardkernel"
 
 # Odroid BSP default settings
@@ -82,12 +84,12 @@ IMAGE_CMD_sdcard_append  = "\
 SERIAL_CONSOLE = "115200 ttyS0"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-hardkernel"
-PREFERRED_VERSION_linux-hardkernel ?= "3.14%"
+PREFERRED_VERSION_linux-hardkernel = "3.14"
 
 #specify u-boot parameters
-PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-hardkernel"
-PREFERRED_PROVIDER_u-boot ?= "u-boot-hardkernel"
-PREFERRED_VERSION_u-boot-hardkernel ?= "2015.01"
+PREFERRED_PROVIDER_virtual/bootloader = "u-boot-hardkernel"
+PREFERRED_PROVIDER_u-boot = "u-boot-hardkernel"
+PREFERRED_VERSION_u-boot-hardkernel = "2015.01"
 
 KERNEL_IMAGETYPE ?= "Image"
 UBOOT_BINARY ?= "u-boot.bin"
