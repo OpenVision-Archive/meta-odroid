@@ -24,8 +24,8 @@ do_install() {
     install -d ${D}${nonarch_base_libdir}/firmware
     install -d ${D}${libdir}
     install -m 0755 ${S}/include/* ${D}${includedir}/amlogic/amadec
-    install -m 0755 ${S}/libamadec.so ${D}/${libdir}
-    install -m 0755 ${S}/acodec_lib/*.so  ${D}/${libdir}
+    install -m 0755 ${S}/libamadec.so ${D}${libdir}
+    install -m 0755 ${S}/acodec_lib/*.so  ${D}${libdir}
     install -m 0644 ${WORKDIR}/libamadec.pc ${D}${libdir}/pkgconfig/
 }
 
