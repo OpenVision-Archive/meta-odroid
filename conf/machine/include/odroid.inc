@@ -103,3 +103,5 @@ MTD_BLACK  = "mmcblk0"
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 EXTRA_ALSA = "amls905"
+
+RCNAME = "hardkernel"
