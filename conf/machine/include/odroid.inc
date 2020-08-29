@@ -33,9 +33,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	hardkernel-mali-${MACHINE} \
 	odroid-gst-amlavsink odroid-gst-amlavout gst-ffmpeg gst-fluendo-mpegdemux \
 	kernel-modules \
-	"
-
-MACHINE_EXTRA_RRECOMMENDS += "\
 	odroid-libamplayer-${MACHINE} \
 	odroid-libamavutils-${MACHINE} \
 	odroid-libamadec-${MACHINE} \
