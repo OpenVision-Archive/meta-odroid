@@ -22,9 +22,11 @@ do_compile() {
 do_install() {
 	install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
 	install -m 0755 ${WORKDIR}/e2-procfs.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra/
+	install -d ${D}${sysconfdir}/modules-load.d
+	echo "e2-procfs" > ${D}${sysconfdir}/modules-load.d/zeprocfs.conf
 }
 
 do_package_qa() {
 }
 
-FILES_${PN} += "${nonarch_base_libdir}/modules/${KV}/extra"
+FILES_${PN} += "${nonarch_base_libdir}/modules/${KV}/extra ${sysconfdir}"
