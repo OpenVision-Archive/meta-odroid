@@ -84,7 +84,7 @@ generate_odroid_c2_sdcard () {
     dd if=${WORKDIR}/boot.img of=${SDCARD} conv=notrunc seek=1 bs=$(expr ${IMAGE_ROOTFS_ALIGNMENT} \* 1024) && sync && sync
     dd if=${SDIMG_ROOTFS} of=${SDCARD} conv=notrunc seek=1 bs=$(expr 1024 \* ${BOOT_SPACE_ALIGNED} + ${IMAGE_ROOTFS_ALIGNMENT} \* 1024) && sync && sync
 
-    cp ${SDCARD} ${SDIMG}
+    cp -f ${SDCARD} ${SDIMG}
 }
 
 #
