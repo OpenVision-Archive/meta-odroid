@@ -31,7 +31,7 @@ DVBSKYPROVIDER = "kernel"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	odroid-shutdown \
 	hardkernel-mali-${MACHINE} \
-	odroid-gst-amlavsink odroid-gst-amlavout gst-ffmpeg gst-fluendo-mpegdemux \
+	odroid-gst-amlavsink odroid-gst-amlavout gst-fluendo-mpegdemux \
 	kernel-modules \
 	odroid-libamplayer-${MACHINE} \
 	odroid-libamavutils-${MACHINE} \
@@ -86,7 +86,7 @@ IMAGE_CMD_prepend = "\
 SERIAL_CONSOLE = "115200 ttyS0"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-hardkernel"
-PREFERRED_VERSION_linux-hardkernel = "3.14"
+PREFERRED_VERSION_linux-hardkernel = "${KERNELVERSION}"
 
 #specify u-boot parameters
 PREFERRED_PROVIDER_virtual/bootloader = "u-boot-hardkernel"

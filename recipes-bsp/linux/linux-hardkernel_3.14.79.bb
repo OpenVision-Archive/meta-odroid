@@ -1,11 +1,14 @@
-inherit kernel machine_kernel_pr samba_change_dialect
+inherit kernel machine_kernel_pr samba_change_dialect deploy
+
 require recipes-kernel/linux/linux-yocto.inc
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-PV = "${KERNELVERSION}"
+COMPATIBLE_MACHINE = "^(odroidc2)$"
 
 #KERNEL_DEVICETREE_odroidc2 = "meson64_odroidc2.dtb"
+
+DEPENDS_append = " virtual/${TARGET_PREFIX}gcc"
 
 SRC_URI = "https://github.com/OpenVisionE2/hardkernel/archive/odroidc2-enigma2.tar.gz \
 	file://add_uboot.patch \
@@ -24,11 +27,10 @@ do_compile_append() {
 	oe_runmake dtbs 
 }
 
-inherit deploy
-
 do_deploy_append() {
 	install -d ${DEPLOYDIR}
 	install ${B}/arch/arm64/boot/dts/meson64_odroidc2.dtb ${DEPLOYDIR}/.
 }
 
-COMPATIBLE_MACHINE = "^(odroidc2)$"
+do_kernel_checkout() {
+}
