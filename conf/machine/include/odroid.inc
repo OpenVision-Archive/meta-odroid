@@ -23,7 +23,6 @@ SOC_FAMILY = "amls905"
 IMAGE_CLASSES += "image_types_odroid"
 require conf/machine/include/arm/arch-armv8.inc
 
-DVBSKYPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	odroid-shutdown \
