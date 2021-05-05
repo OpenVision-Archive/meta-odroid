@@ -93,7 +93,7 @@ KERNEL_IMAGETYPE ?= "Image"
 UBOOT_BINARY ?= "u-boot.bin"
 UBOOT_MACHINE_odroidc2 = "odroidc2_defconfig"
 
-MACHINE_FEATURES += "serial usbgadget fb usbhost vfat ext2 alsa nolcd emmc nogamma nofhdskin HDMI"
+MACHINE_FEATURES += "serial usbgadget fb usbhost vfat ext2 alsa nolcd emmc nogamma nofhdskin HDMI kodi17"
 
 MTD_BLACK  = "mmcblk0"
 
@@ -103,3 +103,7 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 EXTRA_ALSA = "amls905"
 
 RCNAME = "hardkernel"
+
+PREFERRED_PROVIDER_virtual/libgles1 ?= "odroid-opengl-amlogic"
+PREFERRED_PROVIDER_virtual/libgles2 ?= "odroid-opengl-amlogic"
+PREFERRED_PROVIDER_virtual/egl ?= "odroid-opengl-amlogic"
