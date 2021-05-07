@@ -9,7 +9,7 @@ DEPENDS_append = " odroid-libamadec-${MACHINE} odroid-libamcodec-${MACHINE} odro
 
 EXTRA_OECONF += " \
     --with-platform=aml-aarch64 \
-    --with-ffmpeg=stb\
+    --with-ffmpeg=stb \
 "
 
 COMPATIBLE_MACHINE = "^(odroidc2)$"
